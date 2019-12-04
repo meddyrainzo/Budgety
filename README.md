@@ -19,12 +19,11 @@ Some services are over engineered.
 ###### Todo
 
 - [x] [Budget api service](https://github.com/meddyrainzo/Budgety.Services.Budget) - With nestjs
-- [ ] Expenses api service - With kao
-- [ ] Identity api service - with expressjs
-- [ ] Api gateway (Most likely with nestjs. Undecided)
+- [ ] Identity api service - with koa
+- [ ] Api gateway - with expressjs
 - [ ] Frontend - with Reactjs
 
 ###### Maybe
 
 - [ ] Android and iOS application
-- [ ] Angular front end
+- [ ] Vue front end
