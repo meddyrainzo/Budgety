@@ -13,22 +13,6 @@ The front end will be built with Reactjs
 The mobile app will be built with Swift 5, Kotlin and Flutter
 
 
-### Project structure
-- Budgety
-    - NestJs backend
-    - NestJs microservices
-        - The different microservices
-    - Koa backend
-    - Express backend
-    - .NET Core 3 backend
-    - .NET Core microservices 
-        - The different microservices
-    - Reactjs frontend
-    - Flutter frontend
-    - iOS frontend
-    - Android frontend
-
-
 ### Roadmap
 - [ ] Express backend with mongodb
 - [ ] Nestjs backend with postgresql
