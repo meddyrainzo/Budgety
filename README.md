@@ -1,29 +1,42 @@
 # Budgety
 
-### Description
+### Overview
 
-This is a simple budget app built with a nodejs backend and a reactjs front end. iOS and android applications are also on the roadmap.
-My motivation for this project was simply to improve on my skills when using nodejs for the backend.
+Budgety is an application for Budget management. It will have a backend built with
 
-The backend will be made of microservices and use `cqrs`.
-Each microservice will use a different nodejs framework. The frameworks used are
+- Nestjs both normal and microservice
+- Kao
+- Express
+- .NET Core 3 both normal and microservice
 
-- nestjs
-- kao
-- expressjs
+The front end will be built with Reactjs
+The mobile app will be built with Swift 5, Kotlin and Flutter
 
-I use a different framework just for experience
 
-Some services are over engineered.
+### Project structure
+- Budgety
+    - NestJs backend
+    - NestJs microservices
+        - The different microservices
+    - Koa backend
+    - Express backend
+    - .NET Core 3 backend
+    - .NET Core microservices 
+        - The different microservices
+    - Reactjs frontend
+    - Flutter frontend
+    - iOS frontend
+    - Android frontend
 
-###### Todo
 
-- [x] [Budget api service](https://github.com/meddyrainzo/Budgety.Services.Budget) - With nestjs
-- [ ] Identity api service - with koa
-- [ ] Api gateway - with expressjs
-- [ ] Frontend - with Reactjs
-
-###### Maybe
-
-- [ ] Android and iOS application
-- [ ] Vue front end
+### Roadmap
+[] Express backend with mongodb
+[] Nestjs backend with postgresql
+[] Kao backend with mysql
+[] .NET Core 3 backend with mongodb
+[] Reactjs frontend
+[] NestJs microservice with eventstore + ravendb
+[] .NET Core 3 microservice with eventstore + ravendb
+[] Flutter frontend
+[] iOS frontend
+[] Android frontend
