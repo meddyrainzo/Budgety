@@ -1,0 +1,67 @@
+@url=http://localhost:5000/api/earnings
+@id=5e1fa8397ffd0d6390f50679
+@refreshToken=hEtvPjVk2xEE2Q5ODGBfZSfEzaAUABEaZ4jTk6RkKJhgk3wefAa3L66soMlvXkovuPivNWrAEClpeqIQXuBb0abLbc04NyZST5M2HDZSYTFxir0BRVuLkQtkWY4kIDdv
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWUyNzY2NDMzMDIxNWJkYzgwNzc2ZiIsImlhdCI6MTU3OTI3MTI5OSwiZXhwIjoxNTc5Mjc0ODk5fQ.KgAv5SK0qbOkG7ePU_6Kfi3Zjif9oymWjht8xxJtfqs
+
+
+### Get an earning
+GET {{url}}/{{id}}
+Accept: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+### Create an earning
+POST {{url}}
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "budgetPeriodId": "5dae27664330215bdc80778f",
+  "budgetedCategoryId": "5dea27853202215bdc80767f",
+  "name": "Paris refund",
+  "amount": 650
+}
+
+### Change the name
+PATCH {{url}}/{{id}}/changename
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "name": "Vienna refund"
+}
+
+### Change the amount
+PATCH {{url}}/{{id}}/changeamount
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "amount": 760
+}
+
+### Change the category
+PATCH {{url}}/{{id}}/changecategory
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "budgetedCategoryId": "5e1fa8397ffd0d6390f50679"
+}
+
+### Delete the earning
+DELETE  {{url}}/{{id}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": "5dae58764330512bdc80776f"
+}

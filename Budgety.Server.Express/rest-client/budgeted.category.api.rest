@@ -1,0 +1,51 @@
+@url=http://localhost:5000/api/budgetedcategories
+@id=5dea27853202215bdc80767f
+@refreshToken=hEtvPjVk2xEE2Q5ODGBfZSfEzaAUABEaZ4jTk6RkKJhgk3wefAa3L66soMlvXkovuPivNWrAEClpeqIQXuBb0abLbc04NyZST5M2HDZSYTFxir0BRVuLkQtkWY4kIDdv
+@accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWUyNzY2NDMzMDIxNWJkYzgwNzc2ZiIsImlhdCI6MTU3OTI3MTI5OSwiZXhwIjoxNTc5Mjc0ODk5fQ.KgAv5SK0qbOkG7ePU_6Kfi3Zjif9oymWjht8xxJtfqs
+
+
+### Get the category by id
+GET {{url}}/{{id}}
+Accept: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+### Get expenses on the budgeted category
+GET {{url}}/{{id}}/expenses?resultsPerPage=10
+Accept: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+### Get earnings on the budgeted category
+GET {{url}}/{{id}}/earnings?resultsPerPage=10
+Accept: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+### Budget a category
+POST {{url}}
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "categoryName": "Food and drinks",
+  "budgetPeriodId": "5dae27664330215bdc80778f",
+  "amount": 2200
+}
+
+### Change budget amount
+PATCH {{url}}/{{id}}/changeamount
+Accept: application/json
+Content-Type: application/json
+x-auth-token: {{accessToken}}
+x-refresh-token: {{refreshToken}}
+
+{
+  "amount": 1250
+}
+
+### Remove budget from category
+DELETE {{url}}/{{id}}
+Accept: application/json

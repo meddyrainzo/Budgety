@@ -1,0 +1,22 @@
+@url=http://localhost:5000/api/users
+
+### Register user
+POST {{url}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Macho man Randy Savage",
+  "email": "randy.savage@outlook.com",
+  "password": "MachoMan"
+}
+
+### Login user
+POST {{url}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "randy@savage.com",
+  "password": "RandySavage"
+}

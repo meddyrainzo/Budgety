@@ -1,0 +1,31 @@
+@url=http://localhost:5000/api/categories
+@id=5dae28753220215bdc80776f
+
+### Get categories
+GET {{url}}
+Accept: application/json
+
+### Get Category by id
+GET {{url}}/{{id}}
+Accept: application/json
+
+### Create a category
+POST {{url}}
+Content-Type: application/json
+
+{
+  "name": "Food and drinks"
+}
+
+### Change category name
+PATCH {{url}}/{{id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Travels and tourism"
+}
+
+### Delete a category
+DELETE {{url}}/{{id}}
+Content-Type: application/json

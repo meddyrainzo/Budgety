@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  db:
+    build: .
+    container_name: mongo_budgety
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=budgety
+      - MONGO_INITDB_ROOT_USERNAME=meddy
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - budgety:/data/db
+
+volumes:
+  budgety:
+    driver: local
